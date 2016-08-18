@@ -1,5 +1,6 @@
 package ru.ncedu.java.tasks;
 
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.util.Calendar;
 import java.util.List;
@@ -11,20 +12,26 @@ import java.util.SortedMap;
  */
 public class DateCollectionsImpl implements DateCollections {
 
+    Map<String, Element> mainmap;
+
+    int dateStyle = DateFormat.MEDIUM;
 
     @Override
     public void setDateStyle(int dateStyle) {
-
+        this.dateStyle = dateStyle;
     }
 
     @Override
     public Calendar toCalendar(String dateString) throws ParseException {
-        return null;
+        Calendar result;
+        result =
     }
 
     @Override
     public String toString(Calendar date) {
-        return null;
+        String result = "";
+        result += date.toString();
+
     }
 
     @Override
